@@ -26,12 +26,12 @@ li a:hover {
 
 /* Bars */
 
-.main-container {
+.array-container {
   position: absolute;
   left: 100px;
 }
 
-.bars {
+.array-bar {
   width: 2px;
   background-color: pink;
   display: inline-block;
