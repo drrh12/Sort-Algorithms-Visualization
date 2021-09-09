@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SortingVisualizer.css";
 
 function SortingVisualizer() {
   //function to generate random numbers between two given variables
@@ -8,20 +9,18 @@ function SortingVisualizer() {
 
   const [array] = useState([]);
 
-  for (let i = 0; i < 100; i++) {
-    array.push(randomIntFromInterval(5, 1000));
+  for (let i = 0; i < 200; i++) {
+    array.push(randomIntFromInterval(5, 500));
   }
 
   console.log(array);
 
   return (
-    <>
+    <div className="main-container">
       {array.map((val, key) => (
-        <div className="main" key={key}>
-          {val}
-        </div>
+        <div className="bars" key={key} style={{ height: `${val}px` }}></div>
       ))}
-    </>
+    </div>
   );
 }
 
