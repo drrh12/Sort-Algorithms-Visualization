@@ -25,7 +25,7 @@ function SortingVisualizer() {
   function resetArray() {
     setArray(() => {
       let array = [];
-      for (let i = 0; i < 400; i++) {
+      for (let i = 0; i < 200; i++) {
         array.push(randomIntFromInterval(5, 700));
       }
       return array;
@@ -73,16 +73,18 @@ function SortingVisualizer() {
             <a>Bubble Sort</a>
           </li>
           <button onClick={resetArray}>generate</button>
-          <button onClick={mergeSort}>generate</button>
+          <button onClick={mergeSort}>sort</button>
         </ul>
       </div>
-      {array.map((val, key) => (
-        <div
-          className="array-bar"
-          key={key}
-          style={{ height: `${val}px` }}
-        ></div>
-      ))}
+      <div className="array-bar-container">
+        {array.map((val, key) => (
+          <div
+            className="array-bar"
+            key={key}
+            style={{ height: `${val}px` }}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 }

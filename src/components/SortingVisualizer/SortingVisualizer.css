@@ -1,5 +1,4 @@
 /* Menu  */
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -27,12 +26,23 @@ li a:hover {
 /* Bars */
 
 .array-container {
-  position: absolute;
-  left: 100px;
+  width: 80%;
+  height: 100vh;
+  border: 1px solid black;
+  /* position: absolute; */
+  margin: auto;
+  /* left: 100px; */
+}
+
+.array-bar-container {
+  width: 80%;
+  margin: 5% auto;
+  border: 1px solid pink;
 }
 
 .array-bar {
-  width: 2px;
+  width: 4px;
+  max-width: 100%;
   background-color: pink;
   display: inline-block;
   margin: 0 1px;
