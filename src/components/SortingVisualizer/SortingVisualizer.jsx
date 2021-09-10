@@ -6,7 +6,7 @@ import { getMergeSortAnimations } from "../../Algorithms/MergeSort";
 const ANIMATION_SPEED_MS = 1;
 
 // Change this value for the number of bars (value) in the array.
-const NUMBER_OF_ARRAY_BARS = 310;
+const NUMBER_OF_ARRAY_BARS = 80;
 
 // This is the main color of the array bars.
 const PRIMARY_COLOR = "turquoise";
@@ -25,11 +25,15 @@ function SortingVisualizer() {
   function resetArray() {
     setArray(() => {
       let array = [];
-      for (let i = 0; i < 200; i++) {
+      for (let i = 0; i < 50; i++) {
         array.push(randomIntFromInterval(5, 700));
       }
       return array;
     });
+  }
+
+  for (let i = 0; i < 80; i++) {
+    array.push(randomIntFromInterval(5, 700));
   }
 
   function mergeSort() {
@@ -62,19 +66,14 @@ function SortingVisualizer() {
   return (
     <div className="array-container">
       <div>
-        <ul>
-          <li>
-            <a>Merge Sort</a>
-          </li>
-          <li>
-            <a>Quick Sort</a>
-          </li>
-          <li>
-            <a>Bubble Sort</a>
-          </li>
-          <button onClick={resetArray}>generate</button>
-          <button onClick={mergeSort}>sort</button>
-        </ul>
+        <div className="buttons-div">
+          <button className="button" onClick={resetArray}>
+            Generate new array
+          </button>
+          <button className="button" onClick={mergeSort}>
+            Merge Sort
+          </button>
+        </div>
       </div>
       <div className="array-bar-container">
         {array.map((val, key) => (
