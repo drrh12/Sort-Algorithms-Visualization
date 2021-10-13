@@ -25,15 +25,11 @@ function SortingVisualizer() {
   function resetArray() {
     setArray(() => {
       let array = [];
-      for (let i = 0; i < 50; i++) {
-        array.push(randomIntFromInterval(5, 700));
+      for (let i = 0; i < 150; i++) {
+        array.push(randomIntFromInterval(5, 500));
       }
       return array;
     });
-  }
-
-  for (let i = 0; i < 80; i++) {
-    array.push(randomIntFromInterval(5, 700));
   }
 
   function mergeSort() {
